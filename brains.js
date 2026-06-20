@@ -122,7 +122,7 @@ function dibujarPedido(pedido){
     );
 
     ctx.fillStyle = "#555";
-    ctx.font = "20px Arial";
+    ctx.font = "22px Arial";
 
     ctx.fillText(
         new Date().toLocaleDateString(),
@@ -168,8 +168,8 @@ function dibujarPedido(pedido){
                 y
             );
 
-            ctx.fillText`${
-                producto.cantidad} pzs`(),
+            ctx.fillText( `${
+                producto.cantidad} pzs`,
                 500,
                 y
             );
