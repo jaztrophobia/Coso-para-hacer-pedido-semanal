@@ -168,8 +168,8 @@ function dibujarPedido(pedido){
                 y
             );
 
-            ctx.fillText( `${
-                producto.cantidad} pzs`,
+            ctx.fillText( 
+                `${producto.cantidad} pzs`,
                 500,
                 y
             );
