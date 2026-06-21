@@ -1,0 +1,16 @@
+{
+  "Higiene": [
+    "Papel Higiénico",
+    "Jabón de Manos",
+    "Cloro"
+  ],
+  "Bebidas": [
+    "Coca Cola",
+    "Agua"
+  ],
+  "Abarrotes": [
+    "Arroz",
+    "Frijol",
+    "Azúcar"
+  ]
+}
