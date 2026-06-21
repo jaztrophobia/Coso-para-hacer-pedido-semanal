@@ -1,33 +1,81 @@
-body{
+
+body {
     font-family: Arial, sans-serif;
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #f9fafb; /* Un gris muy claro de fondo se ve más limpio */
+    color: #1f2937;
 }
 
-details{
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-summary{
-    padding: 10px;
+details {
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+summary {
+    padding: 14px;
     cursor: pointer;
     font-weight: bold;
+    background-color: #f3f4f6;
+    user-select: none;
 }
 
-.producto{
-    padding: 8px 15px;
+summary:hover {
+    background-color: #e5e7eb;
 }
 
-input[type="number"]{
-    width: 60px;
-    margin-left: 10px;
-}
-
-button{
-    margin-top: 20px;
+.producto {
     padding: 10px 20px;
+    border-top: 1px solid #f3f4f6;
+}
+
+/* Flexbox para alinear el texto a la izquierda y el input a la derecha */
+.producto label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+}
+
+input[type="number"]:focus {
+    outline: 2px solid #2563eb;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
 }
