@@ -67,7 +67,7 @@ function dibujarPedido(pedido){
     const canvas = document.getElementById("pedidoCanvas");
     const ctx = canvas.getContext("2d");
     let altoNecesario = 140;
-    //let totalArticulos = 0;
+    
     
     for (const categoria in pedido) {
         altoNecesario += 40;
@@ -115,16 +115,29 @@ function dibujarPedido(pedido){
             ctx.textAlign = "left";
             ctx.fillText(producto.nombre, 30, y);
             
-            ctx.beginPath();
-            ctx.setLineDash([4, 4]);
-            ctx.moveTo(220, y - 5); 
-            ctx.lineTo(480, y - 5);
-            ctx.strokeStyle = "#888"; 
-            ctx.stroke();
-            ctx.setLineDash([]);
+
+    const anchoNombre = ctx.measureText(producto.nombre).width;
+    const textoCantidad = `${producto.cantidad} pzs`;
+    const anchoCantidad = ctx.measureText(textoCantidad).width;
+    const inicioLinea = 40 + anchoNombre;
+    const finLinea = 550 - anchoCantidad;
+
+        ctx.beginPath();
+        ctx.setLineDash([4, 4]);
+        ctx.moveTo(inicioLinea + 10, y - 5);
+        ctx.lineTo(finLinea - 10, y - 5);
+        ctx.strokeStyle = "#888";
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.textAlign = "right";
+        ctx.fillText(textoCantidad, 560, y);
+
+        ctx.moveTo(inicioLinea + 10, y - 3);
+        ctx.lineTo(finLinea - 10, y - 3);
             
             ctx.textAlign = "right";
-            ctx.fillText(producto.cantidad.toString(), 560, y);
+            ctx.fillText(`${producto.cantidad} pzs`, 560, y);
 
             total += producto.cantidad;
             y += 30;
